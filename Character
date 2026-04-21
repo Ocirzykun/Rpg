@@ -1,0 +1,16 @@
+abstract class Character {
+  String _name;
+  int _health;
+
+  Character(this. _name, this. _health);
+
+  String get name => _name;
+  int get health => _health;
+
+  void takeDamage(int Damage){
+    _health -=Damage;
+    if (_health <0) _health = 0;
+    print("$_name takes $Damage damage.Remaining HP: $_health");
+  }
+  void attack(Character enemy);
+}
